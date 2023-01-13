@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags PWA -->
+    <meta name="theme-color" content="#333333">
+    <meta name="MobileOptimized" content="with">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="./coding.png" type="image.png">
+    <link rel="apple-touch-icon" href="./coding.png" type="image.png">
+    <link rel="apple-touch-startup-image" href="./coding.png" type="image.png">
+
+    <!-- Manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Scripts -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Tittle -->
+    <title>React con CDN</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">  
+        const container = document.querySelector('#root');
+        const root = ReactDOM.createRoot(container);
+
+        /* class Listado extends React.Component { 
+            render() {
+                return (
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                )
+            }
+        } */
+
+        /*
+            function Listado() {
+                return (
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                )
+        } 
+        */
+
+        const Listado = () => {
+            return (
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            )
+        }
+
+        root.render(
+            <div>
+                <h1>React CDN</h1>
+                
+                <Listado />
+            </div>
+        );
+    </script>
+
+    <script src="./register.js"></script>
+</body>
+</html>
